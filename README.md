@@ -7,7 +7,8 @@ MQTT의 구현체로는 Mosquitto, HiveMQ, EMQ X 등 다양한 오픈 소스 브
 ```
   $sudo apt-get update
   $sudo apt-get install libmosquitto-dev
-  $sudo apt-get install libmosquitto-dev:arm64 //크로스 컴파일 대응
+  $gcc -Wall mqttc.c -o mq_amd -lmosquitto //컴파일
+  
   $mosquitto
 [  141.860311]~DLT~   71~INFO     ~FIFO /tmp/dlt cannot be opened. Retrying later...
 1684213873: mosquitto version 1.6.9 starting
@@ -20,6 +21,8 @@ MQTT의 구현체로는 Mosquitto, HiveMQ, EMQ X 등 다양한 오픈 소스 브
   $sudo nano mosquitto.conf 
   bind address <IP adress> //내용 추가후 alt+x, y, enter
   $mosquitto //실행
+  
+  $sudo apt-get install libmosquitto-dev:arm64 //크로스 컴파일 대응
 ```
 
 mosquitto 에서 publishing 하는 방법
@@ -46,6 +49,7 @@ Windows에서 Eclise mosquitto를 사용하는 경우
 ```
   ubuntu 22.04부터 해당 패키지 지원
   $sudo apt-get install libpaho-mqtt-dev
+  $gcc mqtt-subscriber.c -o ms -lpaho-mqtt3c
   
   arm64용의 경우 sources.list에 주소 추가
   $sudo nano /etc/apt/sources.list
