@@ -61,6 +61,6 @@ deb [arch=arm64] http://ports.ubuntu.com/ jammy-updates main multiverse universe
   $sudo apt-get update
   $sudo apt-get install libpaho-mqtt-dev:arm64
   
-  $aarch64-linux-gnu-gcc -Wall mqttc.c -o mq_amd -lpaho-mqtt3c //컴파일
+  $aarch64-linux-gnu-gcc -Wall mqttc.c -o mq_arm -lpaho-mqtt3c //컴파일
 ```  
   
