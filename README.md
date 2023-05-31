@@ -2,9 +2,11 @@
 
 <h6>
 MQTT의 구현체로는 Mosquitto, HiveMQ, EMQ X 등 다양한 오픈 소스 브로커가 있습니다. 클라이언트 구현체로는 Paho MQTT, Eclipse MQTT 등이 있으며, 다양한 언어로 구현
+</h6>
 
-  
+<h6 color="green">
 (WSL) Ubuntu애서 Eclipse mosquitto를 사용하는 경우(broker 실행과 프로그래밍)
+  
 ```
   $sudo apt-get update
   $sudo apt-get install libmosquitto-dev
