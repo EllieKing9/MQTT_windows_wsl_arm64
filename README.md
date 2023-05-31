@@ -4,8 +4,7 @@
 MQTT의 구현체로는 Mosquitto, HiveMQ, EMQ X 등 다양한 오픈 소스 브로커가 있습니다. 클라이언트 구현체로는 Paho MQTT, Eclipse MQTT 등이 있으며, 다양한 언어로 구현
 </h6>
 
-<h6 color="green">
-(WSL) Ubuntu애서 Eclipse mosquitto를 사용하는 경우(broker 실행과 프로그래밍)
+(WSL) Ubuntu애서 Eclipse mosquitto를 사용하는 경우(broker 실행 및 )
   
 ```
   $sudo apt-get update
@@ -56,12 +55,15 @@ Windows에서 Eclise mosquitto를 사용하는 경우
   
   arm64용의 경우 
   
+  > 
   $sudo dpkg --add-architecture arm64
+  
   > 삭제는 
-    > $sudo dpkg --remove-architecture arm64
-    > $sudo apt-get remove --purge `dpkg --get-selections | grep armhf | awk '{print $1}'`
+  $sudo dpkg --remove-architecture arm64
+  
+  > arm64 아키텍쳐 추가여부 확인
   $sudo dpkg --print-foreign-architectures
-    > arm64 아키텍쳐 추가 확인
+    
   
   sources.list에 주소 추가
   $sudo nano /etc/apt/sources.list
