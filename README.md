@@ -53,7 +53,7 @@ Windows에서 Eclise mosquitto를 사용하는 경우
   >mosquitto -c mosquitto.conf -v //설정을 적용하여 실행
 ```
   
-(WSL) Ubuntu애서 paho mqtt client를 사용하는 경우 (프로그래밍, 실행은 mosquitto로)
+(WSL) Ubuntu에서 pyton의 paho mqtt client를 사용하는 경우 (프로그래밍, 실행은 mosquitto로)
 ```
   ubuntu 22.04부터 해당 패키지 지원
   $sudo apt-get install libpaho-mqtt-dev
