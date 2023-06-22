@@ -75,9 +75,18 @@ deb [arch=arm64] http://ports.ubuntu.com/ jammy-updates main multiverse universe
   $sudo apt-get update
   $sudo apt-get install libpaho-mqtt-dev:arm64
   
-  $aarch64-linux-gnu-gcc -Wall mqttc.c -o mq_arm -lpaho-mqtt3c //컴파일
+  $aarch64-linux-gnu-gcc -Wall mqtt.c -o mq_arm -lpaho-mqtt3c //컴파일
+  $aarch64-linux-gnu-gcc -Wall mqtt.c -o mq_arm2 -lpaho-mqtt3c -static //라이브러리 포함(정적)
 ```
 
 테스트 프로그램 
 http://mqtt-explorer.com/
+
+JSON 사용
+```
+  $sudo apt-get install libjson-c-dev
+  $sudo apt-get install libjson-c-dev:arm64
+  $gcc -Wall mqtt.c -o test -lpaho-mqtt3c -ljson-c
+  $aarch64-linux-gnu-gcc -Wall mqtt.c -o test -lpaho-mqtt3c -static -ljson-c
+```
   
